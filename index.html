@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MHK9O Security — Protect Yourself From Hacking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="MHK9O Security — Learn how to protect yourself from hacking, blackmail, and online threats. Multilingual: English, Kurdish, Arabic." />
+  <style>
+    :root {
+      --bg: #050509;
+      --card: #101018;
+      --card-soft: #141422;
+      --accent: #ff2b4a;
+      --accent-soft: #ff2b4a33;
+      --border: #2b2b3a;
+      --text: #f5f5ff;
+      --text-muted: #b0b0c4;
+      --radius-xl: 20px;
+      --radius-lg: 14px;
+      --shadow-soft: 0 18px 45px rgba(0,0,0,0.55);
+      --gap: 18px;
+      --font: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background:
+        radial-gradient(circle at top left, #1a1a2e, transparent 55%),
+        radial-gradient(circle at bottom right, #111827, transparent 60%),
+        var(--bg);
+      color: var(--text);
+    }
+
+    .page {
+      min-height: 100vh;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 18px 40px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #ffffff, #ff2b4a 40%, #111827 75%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      letter-spacing: 1px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      font-size: 16px;
+    }
+
+    .brand-text-title {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .brand-text-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      font-size: 13px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      border: 1px solid #ffffff22;
+      text-decoration: none;
+      color: var(--text-muted);
+      backdrop-filter: blur(8px);
+      background: #00000033;
+    }
+
+    .nav-link:hover {
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3.2fr) minmax(0, 2.4fr);
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 820px) {
+      .hero {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+
+    .hero-main {
+      background: linear-gradient(135deg, #101018ee, #16162acc);
+      border-radius: var(--radius-xl);
+      padding: 20px 18px 18px;
+      border: 1px solid #ffffff10;
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #00000055;
+      border: 1px solid #ffffff22;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .hero-pill span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      background: var(--accent);
+      font-size: 10px;
+      color: #fff;
+    }
+
+    .hero-title {
+      font-size: 24px;
+      line-height: 1.15;
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+
+    .hero-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .hero-langs {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .hero-langs strong {
+      color: #fff;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 8px 22px rgba(255,43,74,0.45);
+    }
+
+    .btn-primary:hover { filter: brightness(1.05); }
+
+    .btn-ghost {
+      background: #00000066;
+      color: var(--text-muted);
+      border: 1px solid #ffffff22;
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .hero-badge {
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #00000055;
+      border: 1px solid #ffffff15;
+    }
+
+    .hero-aside {
+      background: radial-gradient(circle at top, #1f2937, #050509);
+      border-radius: var(--radius-xl);
+      padding: 16px 14px;
+      border: 1px solid #ffffff10;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-aside-header {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .hero-aside-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .timeline {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 12px;
+      font-size: 11px;
+    }
+
+    .timeline li {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .timeline-bullet {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent);
+      margin-top: 3px;
+    }
+
+    .timeline-text strong {
+      color: #fff;
+    }
+
+    .hero-aside-footer {
+      font-size: 11px;
+      color: var(--text-muted);
+      border-top: 1px dashed #ffffff22;
+      padding-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .hero-aside-footer span.highlight {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: var(--gap);
+    }
+
+    @media (max-width: 960px) {
+      .grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .grid {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      padding: 14px 13px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, #ffffff11, transparent 55%);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .card-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .card-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .card-list {
+      margin: 0;
+      padding-left: 16px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .card-tag {
+      display: inline-flex;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid #ffffff22;
+      font-size: 10px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      background: #00000066;
+    }
+
+    .section-title {
+      margin-top: 28px;
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .section-sub {
+      margin: 0 0 12px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: var(--gap);
+    }
+
+    @media (max-width: 960px) {
+      .video-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .video-grid {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+
+    .video-card {
+      background: var(--card-soft);
+      border-radius: var(--radius-lg);
+      padding: 10px 10px 12px;
+      border: 1px solid #ffffff15;
+      font-size: 11px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .video-thumb {
+      border-radius: 11px;
+      background: radial-gradient(circle at 30% 20%, #ffffff33, #ff2b4a55, #000000dd);
+      height: 100px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: #ffffffcc;
+      text-align: center;
+      padding: 0 10px;
+      position: relative;
+    }
+
+    .video-thumb::after {
+      content: "▶";
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      border: 2px solid #ffffffaa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      top: 8px;
+      right: 8px;
+      background: #00000099;
+    }
+
+    .video-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .video-meta {
+      font-size: 10px;
+      color: var(--text-muted);
+      margin-bottom: 3px;
+    }
+
+    .video-lang {
+      font-size: 10px;
+      color: var(--accent);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 11px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid #ffffff22;
+      background: #00000066;
+      color: var(--text-muted);
+    }
+
+    .community {
+      display: grid;
+      grid-template-columns: minmax(0,1.4fr) minmax(0,1.8fr);
+      gap: var(--gap);
+      margin-top: 22px;
+    }
+
+    @media (max-width: 820px) {
+      .community { grid-template-columns: minmax(0,1fr); }
+    }
+
+    .support-box {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      padding: 13px 13px 14px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      font-size: 12px;
+    }
+
+    .community-links {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+
+    .community-link-label {
+      font-weight: 600;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .community-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: #00000066;
+      border: 1px solid #ffffff22;
+      text-decoration: none;
+      color: #ffffffcc;
+      font-size: 11px;
+    }
+
+    .community-link span.handle {
+      font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+      font-size: 11px;
+    }
+
+    .badge-small {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 999px;
+      background: #111827;
+      border: 1px solid #ffffff18;
+      color: var(--text-muted);
+    }
+
+    .form {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      font-size: 11px;
+    }
+
+    @media (max-width: 620px) {
+      .form { grid-template-columns: minmax(0,1fr); }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    label {
+      color: var(--text-muted);
+      font-size: 11px;
+    }
+
+    input, select, textarea {
+      padding: 8px 9px;
+      border-radius: 10px;
+      border: 1px solid #ffffff22;
+      background: #020617;
+      color: #e5e7eb;
+      font-family: var(--font);
+      font-size: 11px;
+      outline: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px #ff2b4a55;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .form-full { grid-column: 1 / -1; }
+
+    .form-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-top: 6px;
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    footer {
+      margin-top: 26px;
+      border-top: 1px solid #111827;
+      padding-top: 10px;
+      font-size: 10px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .legal {
+      font-size: 10px;
+      color: #9ca3af;
+    }
+
+    .legal strong { color: #e5e7eb; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <div class="logo">M9</div>
+        <div>
+          <div class="brand-text-title">MHK9O Security</div>
+          <div class="brand-text-sub">
+            Safe internet • ضد هاکكردن • ضد الاختراق
+          </div>
+        </div>
+      </div>
+      <nav>
+        <a href="#protect" class="nav-link">Protect Yourself</a>
+        <a href="#videos" class="nav-link">AI Videos</a>
+        <a href="#community" class="nav-link">Community</a>
+        <a href="#support" class="nav-link">Support / اشتراک</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-main">
+        <div class="hero-pill">
+          <span>●</span>
+          <strong>MHK9O</strong> • Anti-Hack • ضد الابتزاز
+        </div>
+
+        <h1 class="hero-title">
+          Protect Yourself From Hacking & Blackmail  
+          <br>
+          خۆت پارێزە لە هاککردن و ڕەشکەوتن  
+          <br>
+          احمِ نفسك من الاختراق و الابتزاز
+        </h1>
+
+        <p class="hero-sub">
+          Learn safe ways to report, block and protect your accounts on TikTok, Discord, Instagram
+          and more. No illegal hacking — فقط دژایەتی و پاراستن.
+        </p>
+
+        <p class="hero-langs">
+          🌐 <strong>Languages:</strong> English • کوردی (بادینی) • العربية
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#protect" class="btn btn-primary">Start Protection / دەست پێ بکە</a>
+          <a href="#support" class="btn btn-ghost">Subscribe + Support (PayPal)</a>
+        </div>
+
+        <div class="hero-badges">
+          <div class="hero-badge">❌ No teaching hacking — only defense</div>
+          <div class="hero-badge">✅ TikTok / Discord / Instagram safety tips</div>
+          <div class="hero-badge">🤖 AI-ready video guides (soon)</div>
+        </div>
+      </div>
+
+      <aside class="hero-aside">
+        <div class="hero-aside-header">What this site is for؟</div>
+        <div class="hero-aside-sub">
+          ئەم مالپەڕە تەنها بۆ <strong>پاراستنی خۆت</strong> و <strong>ڕاپۆرتکردنی تهدید</strong> ـە.  
+          هەموو فێرکاری لەوانەیە دژی یاسا نەبێت و هێچ فێرکردنی هاککردن ناکەین.
+        </div>
+
+        <ul class="timeline">
+          <li>
+            <div class="timeline-bullet"></div>
+            <div class="timeline-text">
+              <strong>1. Detect threats</strong><br>
+              نیشانەکانی هاک و تهدید بناسە • اعرف علامات الاختراق و التهديد.
+            </div>
+          </li>
+          <li>
+            <div class="timeline-bullet"></div>
+            <div class="timeline-text">
+              <strong>2. Protect your account</strong><br>
+              Two-Factor, strong password, report & block.
+            </div>
+          </li>
+          <li>
+            <div class="timeline-bullet"></div>
+            <div class="timeline-text">
+              <strong>3. Get help</strong><br>
+              چۆن به‌ TikTok / Discord / Instagram ریپۆرت بکه‌یت • كيف تبلغ و تحمي نفسك قانونياً.
+            </div>
+          </li>
+        </ul>
+
+        <div class="hero-aside-footer">
+          <span>Owner: <span class="highlight">MHK9O</span></span>
+          <span>Contact: <span class="highlight">mhk000ox@gmail.com</span></span>
+        </div>
+      </aside>
+    </section>
+
+    <!-- PROTECT SECTION -->
+    <section id="protect">
+      <h2 class="section-title">How to Protect Yourself / چۆن خۆت بپارێزیت؟ / كيف تحمي نفسك؟</h2>
+      <p class="section-sub">
+        Basic anti-hack steps — بێ فێرکردنی هیچ جۆر هاککردنی ناڕوا. تەنها پاراستن و ڕاپۆرتکردن.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="card-tag">Accounts • حسابەکان</div>
+          <div class="card-title">1. Strong passwords & 2FA</div>
+          <div class="card-sub">
+            هەر هەژمارێک (TikTok, Discord, Instagram, Email) وشەی نهێنی جیاواز بۆ به‌کاربێنە.
+          </div>
+          <ul class="card-list">
+            <li>Use at least 12 characters with letters, numbers, symbols.</li>
+            <li>Never share your password in DM / chat.</li>
+            <li>Two-Factor Authentication (2FA) دابخە لە هەموو هەژمارەکانت.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">Threats • تهدید</div>
+          <div class="card-title">2. If someone uploads your video</div>
+          <div class="card-sub">
+            کاتێک کەسێک ڤیدیۆی تۆی دابه‌زاند بەبێ ریزایت، ئەمە تهدیدە و دەتوانیت ڕاپۆرتی بکەیت.
+          </div>
+          <ul class="card-list">
+            <li>Take screenshots (username, video, chat).</li>
+            <li>Save links to the profile & video.</li>
+            <li>Report inside the app (TikTok / Instagram / Discord).</li>
+            <li>If there are death threats, think about talking to local police.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">Messages • نامەکان</div>
+          <div class="card-title">3. Don't click strange links</div>
+          <div class="card-sub">
+            Be careful from phishing • لینکە فیکەکان بناسە.
+          </div>
+          <ul class="card-list">
+            <li>Never login from links sent by random people.</li>
+            <li>Always type the site yourself (tiktok.com, instagram.com…)</li>
+            <li>إذا شكّيت، لا تضغط و خۆت بپارێزە.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">TikTok • تیکتۆک</div>
+          <div class="card-title">4. TikTok Safety</div>
+          <div class="card-sub">
+            Report, block, privacy settings.
+          </div>
+          <ul class="card-list">
+            <li>Use private account if you feel unsafe.</li>
+            <li>Block accounts that harass you immediately.</li>
+            <li>Use “Report” on videos that contain your face or voice without permission.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">Discord • دیسکۆرد</div>
+          <div class="card-title">5. Discord Safety</div>
+          <div class="card-sub">
+            تەنیا سێرڤەرە باوەڕپێکراوەکان داخل بە • فقط سيرفرات موثوقة.
+          </div>
+          <ul class="card-list">
+            <li>Disable DMs from server members if you get spam.</li>
+            <li>Don't run unknown files or programs from Discord.</li>
+            <li>Report servers that sell drugs or do illegal things.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-tag">Instagram • ئینستاگرام</div>
+          <div class="card-title">6. Instagram Safety</div>
+          <div class="card-sub">
+            حفاظت من الحسابات المزيفة • پاراستن لە هەژمارە درۆکان.
+          </div>
+          <ul class="card-list">
+            <li>Turn on “Login alerts” & 2FA.</li>
+            <li>Private account if you have many threats.</li>
+            <li>Report fake profiles that use your photos or name.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEOS SECTION -->
+    <section id="videos">
+      <h2 class="section-title">AI Video Center / ڤیدیۆی پاراستن / مركز ڤيديوهات الحماية</h2>
+      <p class="section-sub">
+        Here you can later embed AI videos you create (YouTube / MP4).  
+        ئێستا تەنها نیشانەیە، تۆ دەتوانیت ڤیدیۆکانت زیاد بکەیت.
+      </p>
+
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-thumb">
+            Future AI Video — Reporting TikTok Threats safely
+          </div>
+          <div class="video-title">Report TikTok threats the right way</div>
+          <div class="video-meta">
+            TikTok • English + Kurdish + Arabic
+          </div>
+          <div class="video-lang">
+            “چۆن تهدید لە TikTok ڕاپۆرت بکەیت بەشێوەی دروست؟”
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumb">
+            Future AI Video — Discord & Online Servers Safety
+          </div>
+          <div class="video-title">Safe Discord & game servers</div>
+          <div class="video-meta">
+            Discord • Gaming servers
+          </div>
+          <div class="video-lang">
+            “چۆن سێرڤەرە ناڕاستەقینەکان بناسیت و دوور بمینیت؟”
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-thumb">
+            Future AI Video — Stop Blackmail & Save Evidence
+          </div>
+          <div class="video-title">Stop blackmail correctly</div>
+          <div class="video-meta">
+            Evidence • Screenshots • Police
+          </div>
+          <div class="video-lang">
+            “چۆن بەڵگە هێنیت و خۆت بپارێزیت لە ڕەشکەوتن؟”
+          </div>
+        </div>
+      </div>
+
+      <div class="pill-row">
+        <div class="pill">You can replace these with iframe YouTube embeds later.</div>
+        <div class="pill">دەتوانیت ڤیدیۆکانت بە ٣ زمان بکرێیت.</div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY & SUPPORT -->
+    <section id="community" class="community">
+      <div class="support-box">
+        <h2 class="section-title" style="margin-top:0;">Community / کۆمەڵگا / المجتمع</h2>
+        <p class="section-sub">
+          Join MHK9O on Discord & Instagram to ask questions, get support, and learn more about staying safe online.
+        </p>
+
+        <div class="community-links">
+          <div>
+            <div class="community-link-label">Discord</div>
+            <!-- NOTE: change href to your real Discord link / server invite -->
+            <a class="community-link" href="#" target="_blank" rel="noopener">
+              <span>Discord handle</span>
+              <span class="handle">@mhk9o</span>
+            </a>
+          </div>
+
+          <div>
+            <div class="community-link-label">Instagram</div>
+            <!-- NOTE: change href to your real Instagram profile -->
+            <a class="community-link" href="https://instagram.com/mhk9o" target="_blank" rel="noopener">
+              <span>Instagram</span>
+              <span class="handle">@mhk9o</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="pill-row">
+          <div class="pill">Ask in Kurdish / Arabic / English</div>
+          <div class="pill">No toxic hacking / فقط أمان و حماية</div>
+        </div>
+      </div>
+
+      <div class="support-box" id="support">
+        <h2 class="section-title" style="margin-top:0;">Subscribe + Support / اشتراک و پشتگیری</h2>
+        <p class="section-sub">
+          If you want “Plus” help or to support this project, you can send via PayPal to:
+          <strong>mhk000ox@gmail.com</strong>.
+        </p>
+
+        <div class="community-links">
+          <div>
+            <div class="community-link-label">PayPal (manual)</div>
+            <!-- User can open email to contact; for real PayPal link use your own button later -->
+            <a class="community-link" href="mailto:mhk000ox@gmail.com">
+              <span>Send message for Plus / بۆ Plus پەیام بنێرە</span>
+              <span class="badge-small">PayPal email: mhk000ox@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="form" action="#" method="post">
+          <div class="form-group">
+            <label for="name">Name / ناو / الاسم</label>
+            <input id="name" name="name" placeholder="MHK9O" required>
+          </div>
+          <div class="form-group">
+            <label for="platform">Platform / پلاتفۆرم</label>
+            <select id="platform" name="platform">
+              <option value="tiktok">TikTok</option>
+              <option value="discord">Discord</option>
+              <option value="instagram">Instagram</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group form-full">
+            <label for="message">
+              What do you need? / پیویستیت بە چییە؟ / ماذا تحتاج؟
+            </label>
+            <textarea id="message" name="message"
+              placeholder="Example: I have a threat on TikTok and I want help to report and protect my account."></textarea>
+          </div>
+          <div class="form-full">
+            <div class="form-foot">
+              <span>⚠️ Form is demo only. No data is really sent yet.</span>
+              <button class="btn btn-primary" type="submit">Send (Demo)</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="legal">
+        <strong>Legal / یاسایی:</strong> This website is only for education & self-defense online.
+        No teaching or support for illegal hacking.
+      </div>
+      <div class="legal">
+        © <span id="year"></span> MHK9O Security. All rights reserved.
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
